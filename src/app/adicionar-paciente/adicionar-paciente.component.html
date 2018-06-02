@@ -1,0 +1,156 @@
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+<form class="form-horizontal">
+<fieldset>
+
+<!-- Form Name -->
+<legend class="center" > Adicionar Paciente</legend>
+
+<!-- File Button --> 
+<div class="form-group">
+  <label class="col-md-4 control-label" for="Photo">Fotografia :</label>
+  <div class="col-md-4">
+    <input id="Photo" name="Photo" class="input-file" type="file">
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="Registration Number ">Numero de Registo :</label>  
+  <div class="col-md-4">
+  <input id="Registration Number " name="Registration Number " type="text" placeholder="" class="form-control input-md">
+    
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="BI">Número BI :</label>  
+  <div class="col-md-4">
+  <input id="BHT Number" name="BHT Number" type="text" placeholder="" class="form-control input-md">
+    
+  </div>
+</div>
+
+<!-- Select Basic -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="selectbasic">Estado civil :</label>
+  <div class="col-md-4">
+    <select id="selectbasic" name="selectbasic" class="form-control">
+      <option value="1">Casado</option>
+      <option value="2">Solteiro</option>
+    </select>
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="Nome do Paciente ">Nome do Paciente :</label>  
+  <div class="col-md-4">
+  <input id="Patient Name " name="Patient Name " type="text" placeholder="" class="form-control input-md">
+    
+  </div>
+</div>
+
+<!-- Select Basic -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="Estado do Paciente ">Estado do Paciente : </label>
+  <div class="col-md-4">
+    <select id="Estado do Paciente " name="Estado do Paciente " class="form-control">
+      <option value="1">Normal</option>
+      <option value="2">Cuidados intensivos</option>
+      <option value="3">Doença crónica</option>
+            </select>
+  </div>
+</div>
+
+
+<!-- Select Basic -->
+<div class="form-group">
+    <label class="col-md-4 control-label" for="Registo de doença "> Doença Crónica : </label>
+    <div class="col-md-4">
+      <select id="Registo de doença " name="Registo doença " class="form-control">
+        <option value="1">Nenhuma</option>
+        <option value="2">Diabetes</option>
+        <option value="3">Acidente Vascular Cerebral</option>
+        <option value="4">Doenças Cardíacas</option>
+        <option value="5">Osteoporose</option>
+              </select>
+    </div>
+  </div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="textinput">Data de Registo :</label>  
+  <div class="col-md-4">
+      <input class="form-control" type="datetime-local" value="2011-08-19T13:45:00" id="example-datetime-local-input">
+    
+  </div>
+</div>
+
+<!-- Multiple Radios -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="Genero">Gênero :</label>
+  <div class="col-md-4">
+  <div class="radio">
+    <label for="Genero-0">
+      <input type="radio" name="Genero" id="Genero-0" value="1" checked="checked">
+      Feminino
+    </label>
+	</div>
+  <div class="radio">
+    <label for="Genero-1">
+      <input type="radio" name="Genero" id="Genero-1" value="2">
+      Masculino
+    </label>
+	</div>
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="Data de Nascimento">Data de Nascimento :</label>  
+  <div class="col-md-4">
+      <input class="form-control" type="date" value="2018-06-12" id="example-date-input">
+    
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="NIC">Filiaçao :</label>  
+  <div class="col-md-4">
+  <input id="NIC" name="NIC" type="text" placeholder="" class="form-control input-md">
+    
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="Contact Number">Telefone :</label>  
+  <div class="col-md-4">
+  <input id="Contact Number" name="Contact Number" type="text" placeholder="" class="form-control input-md">
+    
+  </div>
+</div>
+
+<!-- Textarea -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="Address">Morada :</label>
+  <div class="col-md-4">                     
+    <textarea class="form-control" id="Address" name="Address"></textarea>
+  </div>
+</div>
+
+<!-- Button -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="Save"></label>
+  <div class="col-md-4">
+    <button id="Save" name="Save" class="btn btn-success">Guardar</button>
+  </div>
+</div>
+
+</fieldset>
+</form>

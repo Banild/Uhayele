@@ -1,0 +1,15 @@
+
+/*#pg{
+    background-color:#5F9F9F;
+    position: relative; 
+    max-width: 800px; /* Maximum width */
+   /* margin: 0 auto; /* Center it
+  } */
+  .content{
+    bottom: 10;
+    background: rgba(0, 0, 0, 0.5); /* Black background with transparency */
+    color: #f1f1f1;
+    width: 100%;
+    padding: 10px;
+}
+  

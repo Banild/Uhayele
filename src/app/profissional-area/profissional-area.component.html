@@ -1,0 +1,100 @@
+<div class="container">
+
+  <h2>BEM VINDO A ÁREA PROFISSIONAL</h2>
+
+  <div class="media">
+			<div class="media-left">
+				<img src="http://www.stickpng.com/img/icons-logos-emojis/users/young-user-icon.png" class="media-object" style="width:60px">
+			</div>
+			<div class="media-body">
+				<h4 class="media-heading">Nome: Dr Raquel da Silva</h4>
+        <p>Departamento: Medicina Interna</p>
+        <p>Hospital Geral do Huambo</p>
+				<div class="form-group">
+					<label class="col-md-2 control-label" for="Sair"></label>
+					<div class="col-md-4">
+						<button href="" routerLink="" type="button" class="btn">Sair</button>
+					</div>
+				</div>
+			</div>
+
+  <div class="container">
+    <div class="col -lg-6">
+      
+     <br> <h3> Opções :</h3>
+      <!-- Select Basic -->
+      <div class="form-group">
+
+        <div class="col-md-4">
+          <select id="Consulta de " name="Consulta de " class="form-control">
+            <option value="1">Pesquisar</option>
+            <option value="2">Adicionar paciente</option>
+            <option value="3">Ver agenda de consultas</option>
+          </select>
+        </div>
+      </div>
+      <br>
+      <h2> Pacientes registados</h2>
+      <br>
+      <br>
+      <div calss="col-lg-4">
+        <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Pesquisar paciente.." title="Type in a name">
+
+        <table id="myTable">
+          <tr class="header">
+            <th style="width:60%;">Nome</th>
+          </tr>
+          <tr>
+            <td>Julio Gabriel</td>
+          </tr>
+          <tr>
+            <td>Osvaldo Banild</td>
+          </tr>
+          <tr>
+            <td>Indira</td>
+          </tr>
+          <tr>
+            <td>Ivan</td>
+          </tr>
+          <tr>
+            <td>Luis Pires</td>
+          </tr>
+          <tr>
+            <td>Adelina</td>
+          </tr>
+          <tr>
+            <td>Márcia</td>
+          </tr>
+          <tr>
+            <td>Dollar Henry</td>
+          </tr>
+        </table>
+      </div>
+      <script>
+        function myFunction() {
+          var input, filter, table, tr, td, i;
+          input = document.getElementById("myInput");
+          filter = input.value.toUpperCase();
+          table = document.getElementById("myTable");
+          tr = table.getElementsByTagName("tr");
+          for (i = 0; i < tr.length; i++) {
+            td = tr[i].getElementsByTagName("td")[0];
+            if (td) {
+              if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+                tr[i].style.display = "";
+              } else {
+                tr[i].style.display = "none";
+              }
+            }
+          }
+        }
+      </script>
+
+
+
+    </div>
+
+
+
+  </div>
+</div>

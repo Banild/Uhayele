@@ -1,0 +1,143 @@
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+<form class="form-horizontal">
+<fieldset>
+
+<!-- Form Name -->
+<legend> Ficha de Consulta Paciente</legend>
+
+
+
+<div class="container">
+
+   <div class = "col-lg-6">
+       Nome: João Paulo Ribeiro<br>
+       Doc.ident.: 120985667<br>
+       Morada: Rua Serpa Pinto, Tchicala-Huambo<br>
+       Doença crónica: Nenhuma.<br>
+       Outras situações: .....<br>
+       </div>
+       <div class ="col-lg-6">
+          Filiação: Pedro Ribeiro e Marcia dos anjos Ribeiro<br>
+         Naturalidade: Huambo <br>
+         Telefone: +244-920-000-000 <br>
+    </div>
+   </div>
+
+<hr>
+<br>
+<br>
+<br>
+<!-- Select Basic -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="Consulta de ">Consulta de: </label>
+  <div class="col-md-4">
+    <select id="Consulta de " name="Consulta de " class="form-control">
+      <option value="1">Medicina Geral</option>
+      <option value="2">Obstetricia</option>
+      <option value="3">Cardiologia</option>
+      <option value="4">Otorrinolaringologia</option>
+      <option value="5">Urologia</option>
+      <option value="6">Dermatologia</option>
+      <option value="7">Oftalmologia</option>
+      <option value="8">Cardiologia</option>
+      <option value="9">Neurologia</option>
+            </select>
+  </div>
+</div>
+
+
+<!-- Select Basic -->
+<div class="form-group">
+    <label class="col-md-4 control-label" for="Registo de doença "> Doença Crónica: </label>
+    <div class="col-md-4">
+      <select id="Registo de doença " name="Registo doença " class="form-control">
+        <option value="1">Nenhuma</option>
+        <option value="2">Diabetes</option>
+        <option value="3">Acidente Vascular Cerebral</option>
+        <option value="4">Doenças Cardíacas</option>
+        <option value="5">Osteoporose</option>
+              </select>
+    </div>
+  </div>
+
+  <!-- Text input-->
+<div class="form-group">
+    <label class="col-md-4 control-label" for="NIC"> Motivo da Consulta:</label>  
+    <div class="col-md-4">
+    <input id="NIC" name="NIC" type="text" placeholder="" class="form-control input-md">
+    </div>
+  </div>
+<!-- Text input-->
+<div class="form-group">
+    <label class="col-md-4 control-label" for="diag">Diagnóstico:</label>  
+    <div class="col-md-4">
+    <input id="dia" name="diag" type="text" placeholder="" class="form-control input-md">
+      
+    </div>
+  </div>
+
+  
+<!-- Multiple Radios -->
+<div class="form-group">
+    <label class="col-md-4 control-label" for="Conduta">Conduta:</label>
+    <div class="col-md-4">
+    <div class="radio">
+      <label for="Conduta-0">
+        <input type="radio" name="Conduta" id="Conduta-0" value="1" checked="checked">
+        Ambulatório
+      </label>
+    </div>
+    <div class="radio">
+      <label for="Conduta-1">
+        <input type="radio" name="Conduta" id="Conduta-1" value="2">
+        Internamento
+      </label>
+    </div>
+    </div>
+  </div>
+
+  <!-- Text input-->
+<div class="form-group">
+    <label class="col-md-4 control-label" for="trat">Tratamento:</label>  
+    <div class="col-md-4">
+    <input id="trat" name="trat" type="text" placeholder="" class="form-control input-md">
+      
+    </div>
+  </div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="textinput">Data/hora:</label>  
+  <div class="col-md-4">
+      <input class="form-control" type="datetime-local" value="2011-08-19T13:45:00" id="example-datetime-local-input">
+    
+  </div>
+</div>
+<!-- Button -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="Receita"></label>
+  <div class="col-md-4">
+    <button id="Receita" name="Receita" class="btn btn-success">Passar Receita Médica</button>
+  </div>
+</div>
+<!-- Button -->
+<div class="form-group">
+    <label class="col-md-4 control-label" for="Save"></label>
+    <div class="col-md-4">
+      <button id="Save" name="Save" class="btn btn-success">Guardar</button>
+    </div>
+  </div>
+
+
+</fieldset>
+</form>
+
+
+
+
+
+
+

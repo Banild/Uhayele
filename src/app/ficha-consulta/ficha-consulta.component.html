@@ -1,143 +1,163 @@
-<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
-<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!DOCTYPE html> <!-- The new doctype-->
+<div class="form-horizontal">
+  <fieldset>
 
-<form class="form-horizontal">
-<fieldset>
-
-<!-- Form Name -->
-<legend> Ficha de Consulta Paciente</legend>
+    <!-- Form Name -->
+    <legend> Ficha de Consulta Paciente</legend>
 
 
 
-<div class="container">
+    <div class="container">
 
-   <div class = "col-lg-6">
-       Nome: João Paulo Ribeiro<br>
-       Doc.ident.: 120985667<br>
-       Morada: Rua Serpa Pinto, Tchicala-Huambo<br>
-       Doença crónica: Nenhuma.<br>
-       Outras situações: .....<br>
-       </div>
-       <div class ="col-lg-6">
-          Filiação: Pedro Ribeiro e Marcia dos anjos Ribeiro<br>
-         Naturalidade: Huambo <br>
-         Telefone: +244-920-000-000 <br>
+      <div class="col-lg-6">
+        Nome: João Paulo Ribeiro
+        <br> Doc.ident.: 120985667
+        <br> Morada: Rua Serpa Pinto, Tchicala-Huambo
+        <br> Doença crónica: Nenhuma.
+        <br> Outras situações: .....
+        <br>
+      </div>
+      <div class="col-lg-6">
+        Filiação: Pedro Ribeiro e Marcia dos anjos Ribeiro
+        <br> Naturalidade: Huambo
+        <br> Telefone: +244-920-000-000
+        <br>
+      </div>
     </div>
-   </div>
 
-<hr>
-<br>
-<br>
-<br>
-<!-- Select Basic -->
-<div class="form-group">
-  <label class="col-md-4 control-label" for="Consulta de ">Consulta de: </label>
-  <div class="col-md-4">
-    <select id="Consulta de " name="Consulta de " class="form-control">
-      <option value="1">Medicina Geral</option>
-      <option value="2">Obstetricia</option>
-      <option value="3">Cardiologia</option>
-      <option value="4">Otorrinolaringologia</option>
-      <option value="5">Urologia</option>
-      <option value="6">Dermatologia</option>
-      <option value="7">Oftalmologia</option>
-      <option value="8">Cardiologia</option>
-      <option value="9">Neurologia</option>
-            </select>
-  </div>
+    <hr>
+    <br>
+    <br>
+    <br>
+    <!-- Select Basic -->
+    <div class="form-group">
+      <label class="col-md-4 control-label" for="consulta">Consulta de: </label>
+      <div class="col-md-4">
+        <select [(ngModel)]="areaconsulta" name="areaconsulta " class="form-control">
+          <option [ngValue]="1">Medicina Geral</option>
+          <option [ngValue]="2">Obstetricia</option>
+          <option [ngValue]="3">Cardiologia</option>
+          <option [ngValue]="4">Otorrinolaringologia</option>
+          <option [ngValue]="5">Urologia</option>
+          <option [ngValue]="6">Dermatologia</option>
+          <option [ngValue]="7">Oftalmologia</option>
+          <option [ngValue]="8">Cardiologia</option>
+          <option [ngValue]="9">Neurologia</option>
+        </select>
+      </div>
+    </div>
+
+
+    <!-- Select Basic -->
+    <div class="form-group">
+      <label class="col-md-4 control-label" for="Registo de doença "> Doença Crónica: </label>
+      <div class="col-md-4">
+        <select [(ngModel)]="registodoenca" name="Registo doença " class="form-control">
+          <option [ngValue]="1">Nenhuma</option>
+          <option [ngValue]="2">Diabetes</option>
+          <option [ngValue]="3">Acidente Vascular Cerebral</option>
+          <option [ngValue]="4">Doenças Cardíacas</option>
+          <option [ngValue]="5">Osteoporose</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Text input-->
+    <div class="form-group">
+      <label class="col-md-4 control-label" for="motivoconsulta"> Motivo da Consulta:</label>
+      <div class="col-md-4">
+        <input [(ngModel)]="motivoconsulta" name="motivoconsulta" type="text" placeholder="" class="form-control input-md">
+      </div>
+    </div>
+    <!-- Text input-->
+    <div class="form-group">
+      <label class="col-md-4 control-label" for="diagnostico">Diagnóstico:</label>
+      <div class="col-md-4">
+        <input [(ngModel)]="diagnostico" name="diagnostico" type="text" placeholder="" class="form-control input-md">
+
+      </div>
+    </div>
+
+
+    <!-- Multiple Radios -->
+    <div class="form-group">
+      <label class="col-md-4 control-label" for="Conduta">Conduta:</label>
+      <div class="col-md-4">
+        <div class="radio">
+          <label for="Conduta-0">
+            <input  [(ngModel)]="ambulatorio" type="radio" name="Conduta" id="Conduta-0" value="1" checked="checked"> Ambulatório
+          </label>
+        </div>
+        <div class="radio">
+          <label for="Conduta-1">
+            <input [(ngModel)]="internamento" type="radio" name="Conduta" id="Conduta-1" value="2" checked="checked"> Internamento
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <!-- Text input-->
+    <div class="form-group">
+      <label class="col-md-4 control-label" for="tratamento">Tratamento:</label>
+      <div class="col-md-4">
+        <input [(ngModel)]="tratamento" name="tratamento" type="text" placeholder="" class="form-control input-md">
+
+      </div>
+    </div>
+
+    <!-- Text input-->
+    <div class="form-group">
+      <label class="col-md-4 control-label" for="textinput">Data/hora:</label>
+      <div class="col-md-4">
+        <input [(ngModel)]="datahora" class="form-control" type="datetime-local" value="2011-08-19T13:45:00" id="example-datetime-local-input">
+
+      </div>
+    </div>
+    <!-- Button -->
+    <div class="form-group">
+      <label class="col-md-4 control-label" for="Receita"></label>
+      <div class="col-md-4">
+        <button id="Receita" name="Receita" class="btn btn-success">Passar Receita Médica</button>
+      </div>
+    </div>
+    <!-- Button -->
+    <div class="form-group">
+      <label class="col-md-4 control-label" for="Save"></label>
+      <div class="col-md-4">
+        <button id="Save" (click)="fichaConsulta()"  name="Save" class="btn btn-success">Guardar</button>
+      </div>
+    </div>
+
+
+  </fieldset>
 </div>
 
 
-<!-- Select Basic -->
-<div class="form-group">
-    <label class="col-md-4 control-label" for="Registo de doença "> Doença Crónica: </label>
-    <div class="col-md-4">
-      <select id="Registo de doença " name="Registo doença " class="form-control">
-        <option value="1">Nenhuma</option>
-        <option value="2">Diabetes</option>
-        <option value="3">Acidente Vascular Cerebral</option>
-        <option value="4">Doenças Cardíacas</option>
-        <option value="5">Osteoporose</option>
-              </select>
-    </div>
-  </div>
 
-  <!-- Text input-->
-<div class="form-group">
-    <label class="col-md-4 control-label" for="NIC"> Motivo da Consulta:</label>  
-    <div class="col-md-4">
-    <input id="NIC" name="NIC" type="text" placeholder="" class="form-control input-md">
-    </div>
-  </div>
-<!-- Text input-->
-<div class="form-group">
-    <label class="col-md-4 control-label" for="diag">Diagnóstico:</label>  
-    <div class="col-md-4">
-    <input id="dia" name="diag" type="text" placeholder="" class="form-control input-md">
-      
-    </div>
-  </div>
 
-  
-<!-- Multiple Radios -->
-<div class="form-group">
-    <label class="col-md-4 control-label" for="Conduta">Conduta:</label>
-    <div class="col-md-4">
-    <div class="radio">
-      <label for="Conduta-0">
-        <input type="radio" name="Conduta" id="Conduta-0" value="1" checked="checked">
-        Ambulatório
-      </label>
-    </div>
-    <div class="radio">
-      <label for="Conduta-1">
-        <input type="radio" name="Conduta" id="Conduta-1" value="2">
-        Internamento
-      </label>
-    </div>
-    </div>
-  </div>
-
-  <!-- Text input-->
-<div class="form-group">
-    <label class="col-md-4 control-label" for="trat">Tratamento:</label>  
-    <div class="col-md-4">
-    <input id="trat" name="trat" type="text" placeholder="" class="form-control input-md">
-      
-    </div>
-  </div>
-
-<!-- Text input-->
-<div class="form-group">
-  <label class="col-md-4 control-label" for="textinput">Data/hora:</label>  
-  <div class="col-md-4">
-      <input class="form-control" type="datetime-local" value="2011-08-19T13:45:00" id="example-datetime-local-input">
-    
-  </div>
+<!-- exmplo de codigo HTML usado na minha Dissertaçao<html>
+<head>
+    <meta charset="UTF-8">
+<!importante materialize.css-->
+    <!--<link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.
+    0/css/materialize.min.css" media="screen,projection"/>-->
+<!--Let browser konw website is optimized for mobile-->
+<!--<meta name="viewport" content="width=device-width, initial-scale=1.0"/> 
+</head>
+<body>
+<div class="main">
+    <div class="sidebar" id="sidebar">
+<div class="topbar blue valign-wrapper">
+  <h5 class="grey-text text-lghten-5 valign center" style="width: 100%;" id="my-uid"></h5>
 </div>
-<!-- Button -->
-<div class="form-group">
-  <label class="col-md-4 control-label" for="Receita"></label>
-  <div class="col-md-4">
-    <button id="Receita" name="Receita" class="btn btn-success">Passar Receita Médica</button>
-  </div>
-</div>
-<!-- Button -->
-<div class="form-group">
-    <label class="col-md-4 control-label" for="Save"></label>
-    <div class="col-md-4">
-      <button id="Save" name="Save" class="btn btn-success">Guardar</button>
+<dvi class="menu">
+  <dvi class="contacts">
+    <ul class="colletction">
+    </ul>
+    <div class="myCam">
+      <video src="" class="responsive-video"muted autoplay id="mayCam"></video>
     </div>
-  </div>
-
-
-</fieldset>
-</form>
-
-
-
-
-
-
-
+  </dvi>
+</dvi>
+</body> 
+</html>-->

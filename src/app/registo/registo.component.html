@@ -1,114 +1,119 @@
-<!-- if you want to create login page and register page together in one page ...you have to only chnage his name...that's it...                 -->
-<div class="container" style="background-image: url(&quot;https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/FyKJcnp/successful-black-woman-doctor-standing-in-office_vk1ibjfbe__F0000.png&quot;); background-repeat:no-repeat;
-background-position:top;background-size:100% 100%; max-height: 700px; width:100%;"  >
+<!-- if you want to create login page and register page together in one page ...you have to only chnage his name...that's it...-->
+<div class="container" autocomplate="off">
+  <!--style="margin-top: 2%;" // para delimitar o conteudo da pagina-->
   
-  <div class="content" >   <!--style="margin-top: 2%;" // para delimitar o coteudo da pagina-->
-    <div class="row">
-  
-      <div class="col-md-12">
-  
-        <h1 class="text-left text-success; color: ">Novo Registo</h1>
-        <br/>
-        
-        <div class="col-sm-6">
-  
-          <div calss="container">
-            <div class="col-lg-6">
-                <div class="form-group">
-                  <label for="UserName">Nome</label>
-                  <input type="text" class="form-control" id="email">
-                </div>
-  
-                <div class="form-group">
-                  <label for="email">Email :</label>
-                  <input type="email" class="form-control" id="email">
-                </div>
-  
-                <div class="form-group">
-                  <label for="nr.ordem">Nr.Ordem dos Médicos:</label>
-                  <input type="text" class="form-control" id="nr.ordem">
-                </div>
-                <div class="form-group">
-                  <label for="especialidade">Especialidade:</label>
-                  <input type="text" class="form-control" id="especialidade">
-                </div>
-                <div class="form-group">
-                  <label for="ch">Centro/Hospital:</label>
-                  <input type="text" class="form-control" id="ch">
-                </div>
-  
-  
-                <div class="form-group">
-                  <label for="datanasc">Data de Nascimento: </label>
-                  <input class="form-control" type="datetime-local" value="2011-08-19T13:45:00" id="example-datetime-local-input">
-                </div>
-  
-                <div class="form-group">
-                  <label for="morada">Morada:</label>
-                  <input type="text" class="form-control" id="morada">
-                </div>
-                <br>
-                <br>
-                <br>
-                <!-- File Button -->
+  <div class="row">
+    <div class="col-lg-6"></div>
+    <div class="col-lg-12">
+
+      <h1 class="text-left text-success; color: ">Novo Registo</h1>
+      <br/>
+      <div class="col-sm-6">
+
+        <div calss="container" >
+          <div class="col-lg-6">
+              <select [(ngModel)]="selectedValue">
+                <option [ngValue]="1" selected>Profissionais</option>
+                <option [ngValue]="2">Pacientes</option>
+                </select>
+
+            <div class="form-group">
+              <label for="nome">Nome</label>
+              <input [(ngModel)]="nome" type="text" class="form-control">
             </div>
-  
-            <div class=" col-sm-4">
-          
-              </div>
-            <div id="menu1" class="col-lg-6">
-  
-              <form action="#">
-                  <div class="form-group">
-                      <label class="col-md-4 control-label" for="Genero">Gênero:</label>
-                      <div class="col-md-4">
-                        <div class="radio">
-                          <label for="Genero-0">
-                            <input type="radio" name="Genero" id="Genero-0" value="1" checked="checked"> Feminino
-                          </label>
-                        </div>
-                        <div class="radio">
-                          <label for="Genero-1">
-                            <input type="radio" name="Genero" id="Genero-1" value="2"> Masculino
-                          </label>
-                        </div>
-                      </div>
+
+            <div class="form-group">
+              <label for="email">Email:</label>
+              <input [(ngModel)]="email" type="email" class="form-control" id="email">
+            </div>
+
+            <div class="form-group" *ngIf="selectedValue==1">
+              <label for="nrmedicos">Nr.Ordem dos Médicos:</label>
+              <input [(ngModel)]="nrmedicos" type="text" class="form-control" id="nrmedicos">
+            </div>
+            <div class="form-group" *ngIf="selectedValue==1">
+              <label for="especialidade">Especialidade:</label>
+              <input [(ngModel)]="especialidade" class="form-control" id="especialidade" required>
+            </div>
+            <div class="form-group" *ngIf="selectedValue==1">
+              <label for="hospital">Centro/Hospital:</label>
+              <input [(ngModel)]="hospital" class="form-control" id="hospital" required>
+            </div>
+
+
+            <div class="form-group">
+              <label for="datanasc">Data de Nascimento: </label>
+              <input [(ngModel)]="datanascimento" class="form-control" type="date" value="2011-08-19" id="datanascimento">
+            </div>
+
+            <div class="form-group">
+              <label for="morada">Morada:</label>
+              <input [(ngModel)]="morada"class="form-control" id="morada">
+            </div>
+            <br>
+            <!-- File Button -->
+          </div>
+         
+          <div id="menu1" class="col-sm-6">
+
+            
+              <div class="form-group">
+                <div class="form-group">
+                  <label class="col-md-4 control-label" for="Genero">Gênero:</label>
+                  <div class="col-md-4">
+                    <div class="radio">
+                      <label for="Genero-0">
+                        <input [(ngModel)]="feminino" type="radio" id="Genero-0" value="1" checked="checked"> Feminino
+                      </label>
                     </div>
-                <br>
-                    <div class="form-group">
-                       <br> <br><label class="col-md-4 control-label" for="Photo">Fotografia:</label>
-                          <input id="Photo" name="Photo" class="input-file" type="file">
-                        
-                      </div>
-  
-                      <div class="form-group">
-                          <label for="pwd">Senha:</label>
-                          <input type="password" class="form-control" id="pwd">
-                        </div>
-  
-               
-                <div class="form-group">
-                  <label for="pwd">Confirmar senha:</label>
-                  <input type="password" class="form-control" id="pwd">
+                    <div class="radio">
+                      <label for="Genero-1">
+                        <input [(ngModel)]="masculino" type="radio" id="Genero-1" value="2" checked="checked"> Masculino
+                      </label>
+                    </div>
+                  </div>
                 </div>
-  
-                <button type="submit" class="btn btn-default btn-lg">Submeter</button>
-              </form>
-              <br/>
-              
-            <a href="#" class="pull-right btn btn-block btn-danger"> Ja está registado ? </a>
-            </div>
+        
+            
+              </div>
+              <br>
+              <div class="form-group">
+                <input [(ngModel)]="fotografia" class="input-file" type="file">
+              </div>
+
+              <div class="form-group">
+                <label for="nome">Nome de utilizador</label>
+                <input [(ngModel)]="utilizador" type="text" class="form-control">
+              </div>
+
+
+              <div class="form-group" autocomplate="off">
+                  <label for="morada">Senha:</label>
+                  <input [(ngModel)]="senha"class="form-control" name="senha" id="senha">
+                </div>
+
+              <div class="form-group" >
+                <label for="consenha">Confirmar senha:</label>
+                <input [(ngModel)]="consenha" class="form-control" name="consenha" id="consenha">
+              </div>
+
+            
+
           </div>
         </div>
-  
-        
-      
       </div>
     </div>
   </div>
-
-
+  <div class="row">
+      <div class="col-lg-3"></div>
+      <div class="col-lg-8"style="width:20%">
+      <button (click)="gravarRegistos()" class="btn btn-success btn-lg">Submeter</button>
+      <br>
+      <br>
+    <div class= "col-lg-8"style="width:20%">
+    <a href=""routerLink="entrar" class="btn btn-danger btn-lg">Ja está registado ?</a> 
+      </div>
+  </div>
+  </div>
 
 </div>
-
-

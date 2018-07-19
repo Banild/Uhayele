@@ -5,11 +5,11 @@
     max-width: 800px; /* Maximum width */
    /* margin: 0 auto; /* Center it
   } */
-  .content{
+  .container{
     bottom: 10;
-    background: rgba(0, 0, 0, 0.5); /* Black background with transparency */
-    color: #f1f1f1;
-    width: 100%;
+   /* Black background with transparency */
+    color: black;
+    width: 80%;
     padding: 10px;
 }
   

@@ -1,21 +1,24 @@
 
 <nav class="navbar navbar-inverse">
-  <div class="container-fluid">
+  <div class="container-fluid" style="text-align: right">
     <div class="navbar-header">
       <a class="navbar-brand" href="" routerLink="">DrUhayele</a>
     </div>
-    <ul class="nav navbar-nav">
-      <li class="active"><a href="" routerLink="">Home</a></li>
+    <div class="container">
+    <ul class="nav navbar-nav" >
+      <li ><a href="" routerLink="">Home</a></li>
       <li><a href="" routerLink="info" >Informações</a></li>
       <li><a href="" routerLink="entrar" >Entrar</a></li>
       <li><a href="" routerLink="registo" >Registo</a></li>
-      <li><a href="" routerLink="adpaciente" >Adicionar Paciente</a></li>
-      <li><a href="" routerLink="prof" >Area Profissional</a></li>
-      <li><a href="" routerLink="ficha" >Ficha Paciente</a></li>
-      <li><a href="" routerLink="areautente" >Area Utente</a></li>
-      <li><a href="" routerLink="fichaconsulta" >Ficha de Consulta</a></li>
+      <li *ngIf="tipoUtilizador==2"><a href="" routerLink="adpaciente" >Adicionar Paciente</a></li>   
+      <li *ngIf="tipoUtilizador==2"><a href="" routerLink="prof" >Area Profissional</a></li>
+      <li *ngIf="tipoUtilizador==2"><a href="" routerLink="ficha" >Ficha Paciente</a></li>
+      <li *ngIf="tipoUtilizador==2"><a href="" routerLink="areautente" >Area Utente</a></li>
+      <li *ngIf="tipoUtilizador==2"><a href="" routerLink="fichaconsulta" >Ficha de Consulta</a></li>
       <li><a href="" routerLink="contactos"> <strong>Contactos</strong></a></li>
+
     </ul>
+  </div>
     <!--form class="navbar-form navbar-left" action="/action_page.php">
       <div class="input-group">
         <input type="text" class="form-control" placeholder="Search" name="search">

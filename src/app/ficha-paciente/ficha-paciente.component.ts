@@ -10,6 +10,12 @@ export class FichaPacienteComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+
+
+
+
+
+    
   }
 
 }

@@ -20,6 +20,8 @@ import { ProfissionalAreaComponent } from './profissional-area/profissional-area
 import { FichaPacienteComponent } from './ficha-paciente/ficha-paciente.component';
 import { AreaUtenteComponent } from './area-utente/area-utente.component';
 import { FichaConsultaComponent } from './ficha-consulta/ficha-consulta.component';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -44,19 +46,22 @@ import { FichaConsultaComponent } from './ficha-consulta/ficha-consulta.componen
     BrowserModule,
     AppRoutingModule,
     AppBootstrapModule, // it doesn´t import thst one
+    HttpClientModule,
+    ReactiveFormsModule,
+    FormsModule,
     BsDropdownModule.forRoot(),
     TooltipModule.forRoot(),
-    ModalModule.forRoot(),
+    ModalModule.forRoot()
    // RouterModule.forRoot(appRoutes)
   ],
   exports: [BsDropdownModule, TooltipModule, ModalModule],
   providers: [],
   bootstrap: [AppComponent]
+
 })
 
 export class AppModule {
  
  }
-
 
 

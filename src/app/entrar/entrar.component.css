@@ -47,7 +47,7 @@
       text-align: center;
    }
 
-   .input-group-addon
+   #input-group-addon
    {
       background-color: #5cb85c;
       color: white;
@@ -64,3 +64,10 @@
       background-color: #FF3838;
       color: white;
    }
+  
+#panel{
+
+    color: #31708f;
+    background-color: white;
+    border-color:#bce8f1;
+}

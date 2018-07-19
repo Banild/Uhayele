@@ -6,10 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./area-utente.component.css']
 })
 export class AreaUtenteComponent implements OnInit {
-
+  user: any;
   constructor() { }
 
   ngOnInit() {
+ this.user=JSON.parse(localStorage.getItem('user'))
   }
 
 }

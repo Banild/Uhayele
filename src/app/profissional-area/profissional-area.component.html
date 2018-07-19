@@ -7,15 +7,15 @@
 				<img src="http://www.stickpng.com/img/icons-logos-emojis/users/young-user-icon.png" class="media-object" style="width:60px">
 			</div>
 			<div class="media-body">
-				<h4 class="media-heading">Nome: Dr Raquel da Silva</h4>
-        <p>Departamento: Medicina Interna</p>
-        <p>Hospital Geral do Huambo</p>
+				<h4 class="media-heading">Nome: {{ user.nome }}</h4>
+        <p>Especialidade: {{ user.especialidade }}</p>
+        <p> Centro Hospitalar: {{ user.hospital }}</p>
 				<div class="form-group">
 					<label class="col-md-2 control-label" for="Sair"></label>
 					<div class="col-md-4">
 						<button href="" routerLink="" type="button" class="btn">Sair</button>
 					</div>
-				</div>
+				</div> 
 			</div>
 
   <div class="container">
@@ -33,6 +33,7 @@
           </select>
         </div>
       </div>
+     
       <br>
       <h2> Pacientes registados</h2>
       <br>

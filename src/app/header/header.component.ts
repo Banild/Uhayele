@@ -6,10 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
+  tipoUtilizador='user.tipoUtilizador';
+ user: any;
+
 
   constructor() { }
 
   ngOnInit() {
+    this.user=JSON.parse(localStorage.getItem('user'))
   }
 
 }

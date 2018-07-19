@@ -10,11 +10,11 @@
       <li><a href="" routerLink="info" >Informações</a></li>
       <li><a href="" routerLink="entrar" >Entrar</a></li>
       <li><a href="" routerLink="registo" >Registo</a></li>
-      <li *ngIf="tipoUtilizador==2"><a href="" routerLink="adpaciente" >Adicionar Paciente</a></li>   
-      <li *ngIf="tipoUtilizador==2"><a href="" routerLink="prof" >Area Profissional</a></li>
-      <li *ngIf="tipoUtilizador==2"><a href="" routerLink="ficha" >Ficha Paciente</a></li>
-      <li *ngIf="tipoUtilizador==2"><a href="" routerLink="areautente" >Area Utente</a></li>
-      <li *ngIf="tipoUtilizador==2"><a href="" routerLink="fichaconsulta" >Ficha de Consulta</a></li>
+      <li *ngIf="tipoUtilizador!=2"><a href="" routerLink="adpaciente" >Adicionar Paciente</a></li>   
+      <li *ngIf="tipoUtilizador!=2"><a href="" routerLink="prof" >Area Profissional</a></li>
+      <li *ngIf="tipoUtilizador!=2"><a href="" routerLink="ficha" >Ficha Paciente</a></li>
+      <li *ngIf="tipoUtilizador!=2"><a href="" routerLink="areautente" >Area Utente</a></li>
+      <li *ngIf="tipoUtilizador!=2"><a href="" routerLink="fichaconsulta" >Ficha de Consulta</a></li>
       <li><a href="" routerLink="contactos"> <strong>Contactos</strong></a></li>
 
     </ul>

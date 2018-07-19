@@ -19,12 +19,10 @@ export class EntrarComponent implements OnInit {
   utilizador: string;
   senhaentrar: string;
   lembrar: string;
-
+dadosServer: any;
   private publicDealsUrl = "http://okuscience.com/uhayele/select_tabl_gravarRegistos.php";
 
-
   constructor(private http:HttpClient, private router: Router) {
-
 
   }
 
@@ -40,12 +38,13 @@ export class EntrarComponent implements OnInit {
   }
 this.http.post(this.publicDealsUrl, this.acesso).subscribe(
   dados =>  { 
+    this.dadosServer=dados;
     console.log(dados);
     var user='0';
     try
     {
-      user =dados.tabl_registo[0].tipoUtilizador;
-      localStorage.setItem('user',JSON.stringify(dados.tabl_registo[0]))
+      user =this.dadosServer.tabl_registo[0].tipoUtilizador;
+      localStorage.setItem('user',JSON.stringify(this.dadosServer.tabl_registo[0]))
     }
     catch(x){
 

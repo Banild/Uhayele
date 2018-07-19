@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-  tipoUtilizador='user.tipoUtilizador';
+ tipoUtilizador= 2;
  user: any;
 
 

@@ -49,7 +49,7 @@ export class AdicionarPacienteComponent implements OnInit {
 
      
     }
-    this.http.post("http://okuscience.com/uhayele/insert_tabl_adpaciente.php", this.paciente).subscribe(
+    this.http.post("https://okuscience.com/uhayele/insert_tabl_adpaciente.php", this.paciente).subscribe(
         dados =>  { 
           console.log(dados);
           this.paciente = dados;

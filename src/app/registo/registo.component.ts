@@ -57,7 +57,7 @@ this.registo={
 }
 
 
-this.http.post("http://okuscience.com/uhayele/insert_tabl_gravarRegistos.php", this.registo).subscribe(
+this.http.post("https://okuscience.com/uhayele/insert_tabl_gravarRegistos.php", this.registo).subscribe(
   dados =>  { 
     console.log(dados);
     this.registo = dados;

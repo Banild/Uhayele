@@ -20,7 +20,7 @@ export class EntrarComponent implements OnInit {
   senhaentrar: string;
   lembrar: string;
 dadosServer: any;
-  private publicDealsUrl = "http://okuscience.com/uhayele/select_tabl_gravarRegistos.php";
+  private publicDealsUrl = "https://okuscience.com/uhayele/select_tabl_gravarRegistos.php";
 
   constructor(private http:HttpClient, private router: Router) {
 
